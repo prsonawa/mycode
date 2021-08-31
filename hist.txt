@@ -1,0 +1,426 @@
+    1  "
+    2  exit
+    3  exit
+    4  q
+    5  IS
+    6  cat /etc/lsb-release 
+    7  python3 --version
+    8  c:/
+    9* 
+   10  vim myfirstfile.txt
+   11  vim zork.test
+   12  sudo ps aux
+   13  sudo ps aux | grep tmux
+   14  cat /etc/lsb-release 
+   15  vi lab1.txt
+   16  vim lab1.txt
+   17  python lab1.txt
+   18  python3 lab1.txt
+   19  vim lab1.txt
+   20  python3 lab1.txt
+   21  vim lab1.txt
+   22  python3 lab1.txt
+   23  vim lab1.txt
+   24  python3 lab1.txt
+   25  vim lab1.txt
+   26  python3 lab1.txt
+   27  vim lab1.txt
+   28  python3 lab1.txt
+   29  vim lab1.txt
+   30  python3 lab1.txt
+   31  vim lab1.txt
+   32  python3 lab1.txt
+   33  vim lab1.txt
+   34  python3 lab1.txt
+   35  vim lab1.txt
+   36  vim lab2monday.py
+   37  python3 lab2monday.py
+   38  vim lab2monday.py
+   39  python3 lab2monday.py
+   40  vim lab1.txt
+   41  vim lab2monday.py
+   42  python3 lab2monday.py
+   43  vim lab2monday.py
+   44  python3 lab2monday.py
+   45  vim lab2monday.py
+   46  python3 lab2monday.py
+   47  # Very nice job!
+   48  thanks
+   49  thanks!
+   50  vim lab2monday.py
+   51  python3 lab2monday.py
+   52  vim lab1.txt
+   53  python3 lab1.txt
+   54  vim lab1.txt
+   55  python3 lab1.txt
+   56  vim lab1.txt
+   57  ls
+   58  cd /home/student/.ssh
+   59  ssh-keygen -f id_rsa_github
+   60  cat id_rsa_github.pub
+   61  cd ~
+   62  git config --global user.name "Pramod"
+   63  git config --global user.name "prsonawa"
+   64  git config --global user.email "prsonawa@users.noreply.github.com"
+   65  git clone git@github.com:prsonawa/mycode.git
+   66  cd /home/student/mycode/
+   67  cd /home/student/mycode3/
+   68  git clone git@github.com:prsonawa/mycode3.git
+   69  cd /home/student/mycode/
+   70  vim /home/student/mycode/README.md
+   71  git status
+   72  git add *
+   73  git commit -m "First commit to learn about version controlling"
+   74  git status
+   75  cd /home/student/
+   76  cd mycode/
+   77  echo "This is for the second example!" > ex2.txt
+   78  cd /home/student/.ssh
+   79  ssh-keygen -f id_rsa_github
+   80  cat id_rsa_github.pub
+   81  q
+   82  exit
+   83  cat id_rsa_github.pub
+   84  cd /home/student/.ssh
+   85  ssh-keygen -f id_rsa_github
+   86  cat id_rsa_github.pub
+   87  exit
+   88  cd /home/student/.ssh
+   89  ssh-keygen -f id_rsa_github
+   90  cat id_rsa_github.pub
+   91  cd ~
+   92  git config --global user.name "prsonawa"
+   93  git config --global user.email "prsonawa@users.noreply.github.com"
+   94  git clone git@github.com:prsonawa/mycode.git
+   95  cd /home/student/mycode/
+   96  vim /home/student/mycode/README.md
+   97  clear
+   98  ls
+   99  cd ..
+  100  ls
+  101  cd mycode/
+  102  ls
+  103  git status
+  104  # you seem to have made an empty repo on github
+  105  # hang on
+  106  cd ..
+  107  cd mycode/
+  108  #git remote add origin git@github.com
+  109  cat .git/config 
+  110  git remote add origin git@github.com:prsonawa/mycode.git
+  111  git branch -M main
+  112  git status
+  113  git push -u origin main
+  114  git pull
+  115  git push -u origin main
+  116  git status
+  117  git add ex2.txt 
+  118  git commit -m "test"
+  119  git push
+  120  git push -u origin main
+  121  git push -u origin HEAD:master
+  122  git checkout main
+  123  git status
+  124  echo something > test2
+  125  git status
+  126  git add test2 
+  127  git commit -m "test2"
+  128  git push
+  129  vim .git/config 
+  130  git push
+  131  git pull
+  132  vim .git/config 
+  133  git push origin HEAD:master
+  134  git branch master
+  135  git status
+  136  git pull
+  137  echo test3
+  138  echo test3 > test3
+  139  git add test3 
+  140  git commit -m "maybe?"
+  141  git push
+  142  git status
+  143  cd /home/student/
+  144  mkdir ~/mycode/pyfy/
+  145  vim ~/mycode/pyfy/vendor.txt
+  146  vim ~/mycode/pyfy/ciscoex.json
+  147  vim ~/mycode/pyfy/reading01.py
+  148  cd ~/mycode/pyfy/
+  149  python3 reading01.py
+  150  cat ~/mycode/pyfy/vendor-ips.txt
+  151  vim ~/mycode/pyfy/readingjson02.py
+  152  python3 ~/mycode/pyfy/readingjson02.py
+  153  cat ~/mycode/pyfy/ciscoex.text
+  154  vim ~/mycode/pyfy/copyfiles01.py
+  155  python3 copyfiles01.py
+  156  cat ciscoex.json.bkup
+  157  git commit
+  158  ./ git commit
+  159  cd ~
+  160  mkdir ~/mycode/
+  161  cd ~/mycode/
+  162  vim ~/mycode/makejson01.py
+  163  python3 ~/mycode/makejson01.py
+  164  cat ~/mycode/galaxyguide.json
+  165  vim makejson02.py
+  166  python3 ~/mycode/makejson02.py
+  167  vim ~/mycode/datacenter.json
+  168  vim ~/mycode/makejson03.py
+  169  python3 ~/mycode/makejson03.py
+  170  cd ~
+  171  mkdir ~/mycode/
+  172  cd ~/mycode
+  173  python3 -m pip install pyyaml
+  174  vim ~/mycode/makeyaml01.py
+  175  python3 ~/mycode/makeyaml01.py
+  176  cat ~/mycode/galaxyguide.yaml
+  177  vim ~/mycode/makeyaml02.py
+  178  python3 ~/mycode/makeyaml02.py
+  179  vim ~/mycode/myYAML.yml
+  180  vim ~/mycode/readyaml03.py
+  181  python3 ~/mycode/readyaml03.py
+  182  vim ~/mycode/readyaml04.py
+  183  python3 ~/mycode/readyaml04.py
+  184  git add *
+  185  git status
+  186  git push origin main
+  187  ls
+  188  mkdir ~/mycode/pyfy/
+  189  cd ..
+  190  ls
+  191  mkdir ~/mycode/pyfy/
+  192  cd ~
+  193  ls
+  194  ls -als
+  195  pwd
+  196  cd mycode
+  197  ls
+  198  cat pyfy/vendor.txt
+  199  cat pyfy/ciscoex.json
+  200  cd pyfy/
+  201  ls
+  202  cat vendor
+  203  cat vendor.txt 
+  204  cat reading01.py 
+  205  vim reading01.py 
+  206  python3 reading01.py 
+  207  vim reading01.py 
+  208  python3 reading01.py 
+  209  cat ~/mycode/pyfy/vendor-ips.txt
+  210  cat ciscoex.text 
+  211  cat reading02.py 
+  212  cat readingjason2.py 
+  213  cat readingjson2.py 
+  214  cat readingjson02.py 
+  215  python3 ~/mycode/pyfy/readingjson02.py
+  216  cat ~/mycode/pyfy/ciscoex.text
+  217  cd..
+  218  cd ..
+  219  cd ~/mycode/
+  220  ls
+  221  cat ~/mycode/makejson01.py
+  222  cat vendor.txt python3 ~/mycode/makejson01.py
+  223* 
+  224  cat ~/mycode/galaxyguide.json
+  225  python3 ~/mycode/makejson02.py
+  226  python3 ~/mycode/makejson03.py
+  227  cat ~/mycode/galaxyguide.yaml
+  228  python3 ~/mycode/makeyaml02.py
+  229  cat  ~/mycode/myYAML.yml
+  230  python3 ~/mycode/readyaml03.py
+  231  python3 ~/mycode/readyaml04.py
+  232  python3 ~/mycode/makejson03.py
+  233  cat myYAML.yml.updated
+  234  mkdir -p ~/mycode/introapi/
+  235  vim ~/mycode/introapi/norad01.py
+  236  python3 ~/mycode/introapi/norad01.py
+  237  python3 -m pip install requests
+  238  vim ~/mycode/introapi/norad01requests.py
+  239  python3 ~/mycode/introapi/norad01requests.py
+  240  vim ~/mycode/introapi/norad01requests.py
+  241  python3 ~/mycode/introapi/norad01requests.py
+  242  vim ~/mycode/introapi/norad01requests.py
+  243  python3 ~/mycode/introapi/norad01requests.py
+  244  vim ~/mycode/introapi/norad01requests.py
+  245  python3 ~/mycode/introapi/norad01requests.py
+  246  ls
+  247  python3 ~/mycode/introapi/norad01requests.py
+  248  vim ~/mycode/introapi/norad01requests.py
+  249  python3 ~/mycode/introapi/norad01requests.py
+  250  vim ~/mycode/introapi/norad01requests.py
+  251  less satellites_names.txt 
+  252  vim ~/mycode/introapi/norad01requests.py
+  253  rm satellites_names.txt 
+  254  python3 ~/mycode/introapi/norad01requests.py
+  255  less satellites_names.txt 
+  256  vim ~/mycode/introapi/norad01requests.py
+  257  mkdir -p ~/mycode/spacex/
+  258  vim ~/mycode/spacex/spacexapi01a.py
+  259  python3 ~/mycode/spacex/spacexapi01a.py
+  260  vim ~/mycode/spacex/spacexapi01a.py
+  261  python3 ~/mycode/spacex/spacexapi01a.py
+  262  vim ~/mycode/spacex/spacexapi01a.py
+  263  python3 ~/mycode/spacex/spacexapi01a.py
+  264  vim ~/mycode/spacex/spacexapi01a.py
+  265  python3 ~/mycode/spacex/spacexapi01a.py
+  266  vim ~/mycode/spacex/spacexapi01a.py
+  267  python3 ~/mycode/spacex/spacexapi01a.py
+  268  python3 -m pip install requests
+  269  vim ~/mycode/spacex/spacexapi01b.py
+  270  python3 ~/mycode/spacex/spacexapi01b.py
+  271  vim ~/mycode/spacex/spacexapi01b.py
+  272  python3 ~/mycode/spacex/spacexapi01b.py
+  273  vim ~/mycode/spacex/spacexapi01b.py
+  274  python3 ~/mycode/spacex/spacexapi01b.py
+  275  vim ~/mycode/spacex/spacexapi01b.py
+  276  python3 ~/mycode/spacex/spacexapi01b.py
+  277  vim ~/mycode/spacex/spacexapi01b.py
+  278  python3 ~/mycode/spacex/spacexapi01b.py
+  279  vim ~/mycode/spacex/spacexapi01b.py
+  280  python3 ~/mycode/spacex/spacexapi01b.py
+  281  vim ~/mycode/introapi/norad01requests.py
+  282  python3 ~/mycode/introapi/norad01requests.py
+  283  vim ~/mycode/spacex/spacexapi01b.py
+  284  python3 ~/mycode/spacex/spacexapi01b.py
+  285  vim ~/mycode/spacex/spacexapi01b.py
+  286  python3 ~/mycode/spacex/spacexapi01b.py
+  287  mkdir ~/mycode/
+  288  cd ~/mycode/
+  289  vim ~/mycode/ride_iss.py
+  290  python3 ~/mycode/ride_iss.py
+  291  vim ~/mycode/ride_iss.py
+  292  python3 ~/mycode/ride_iss.py
+  293  vim ~/mycode/ride_iss.py
+  294  python3 ~/mycode/ride_iss.py
+  295  vim ~/mycode/ride_iss.py
+  296  python3 ~/mycode/ride_iss.py
+  297  vim ~/mycode/ride_iss.py
+  298  python3 ~/mycode/ride_iss.py
+  299  mkdir -p /home/student/mycode/
+  300  cd /home/student/mycode/
+  301  vim ~/mycode/mygame01.py
+  302  chmod u+x ~/mycode/mygame01.py
+  303  python3 ~/mycode/mygame01.py
+  304  vim ~/mycode/mygame01.py
+  305  python3 ~/mycode/mygame01.py
+  306  vim ~/mycode/mygame01.py
+  307  python3 ~/mycode/mygame01.py
+  308  vim ~/mycode/mygame01.py
+  309  python3 ~/mycode/mygame01.py
+  310  vim ~/mycode/mygame01.py
+  311  python3 ~/mycode/mygame01.py
+  312  vim ~/mycode/mygame01.py
+  313  python3 ~/mycode/mygame01.py
+  314  vim ~/mycode/mygame01.py
+  315  go north
+  316  python3 ~/mycode/mygame01.py
+  317  vim ~/mycode/mygame01.py
+  318  python3 ~/mycode/mygame01.py
+  319  vim ~/mycode/mygame01.py
+  320  python3 ~/mycode/mygame01.py
+  321  vim ~/mycode/mygame01.py
+  322  python3 ~/mycode/mygame01.py
+  323  vim ~/mycode/mygame01.py
+  324  python3 ~/mycode/mygame01.py
+  325  vim ~/mycode/mygame01.py
+  326  python3 ~/mycode/mygame01.py
+  327  vim ~/mycode/mygame01.py
+  328  mkdir -p ~/mycode/pandas/
+  329  cd ~/mycode/pandas/
+  330  python3 -m pip install pandas xlrd openpyxl
+  331  wget https://static.alta3.com/files/movies.xls
+  332  vim pandabear01.py
+  333  python3 pandabear01.py
+  334  wget https://static.alta3.com/files/ciscodata.csv
+  335  wget https://static.alta3.com/files/ciscodata2.json
+  336  cat ciscodata.csv
+  337  cat ciscodata2.json
+  338  vim pandabear02.py
+  339  python3 pandabear02.py
+  340  vim pandabear02.py
+  341  python3 pandabear02.py
+  342  python3 -m pip install xlwt
+  343  vim pandabear03.py
+  344  python3 pandabear03.py
+  345  cat combined_ciscodata.json
+  346  cat combined_ciscodata.csv
+  347  vim pandabear04.py
+  348  python3 pandabear04.py
+  349  cat combined_ciscodata.json
+  350  cat combined_ciscodata.csv
+  351  wget https://static.alta3.com/courses/pyna/netTraffic.csv
+  352  vim pandabear05.py
+  353  python3 pandabear05.py
+  354  vim pandabear06.py
+  355  python3 pandabear06.py
+  356  vim pandabear06.py
+  357  python3 pandabear06.py
+  358  clear
+  359  python3 pandabear06.py
+  360  less netTraffic.csv 
+  361  wc netTraffic.csv 
+  362  less netTraffic.csv 
+  363  vim pandabear06.py
+  364  python3 pandabear06.py
+  365  vim pandabear06.py
+  366  rm pandabear06.py 
+  367  vim pandabear06.py
+  368  python3 pandabear06.py
+  369  vim pandabear06.py
+  370  rm pandabear06.py 
+  371  vim pandabear06.py
+  372  python3 pandabear06.py
+  373  vim panda07.py
+  374  python3 panda07.py
+  375  vim panda07.py
+  376  python3 panda07.py
+  377  python3 -m pip install matplotlib
+  378  python3 -m pip install seaborn
+  379  vim pandabear08.py
+  380  python3 pandabear08.py
+  381  ls -l
+  382  git status
+  383  git commit -m "reason for commit"
+  384  git push origin main
+  385  pwd
+  386  cd ..
+  387  ls -l
+  388  git status
+  389  cd -
+  390  git status
+  391  git add
+  392  git add *
+  393  git add .
+  394  git push --help
+  395  git merge
+  396  git commit --amend
+  397  git add
+  398  git push origin main
+  399  git pull
+  400  git push
+  401  git push origin main
+  402  git push origin main --force
+  403  cd pandas/
+  404  ls -l
+  405  cd /home/student/static/
+  406  ls -l
+  407  mv * ~/mycode/pandas/
+  408  cd ~/mycode/pandas/
+  409  ls l
+  410  ls -l
+  411  git push origin main
+  412  cd ..
+  413  git push origin main
+  414  cd mycode/
+  415  git push origin main
+  416  git push origin main force
+  417  git push origin main --force
+  418  touch *
+  419  ld -l
+  420  ls -l
+  421  git pull
+  422  git status 
+  423  git commit 
+  424  git push 
+  425  git push origin main
+  426  history > hist.txt
