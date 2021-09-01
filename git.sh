@@ -1,4 +1,4 @@
 cd ~/mycode
 git add *
-git commit -m "Python and physical interfaces"
+git commit -m "Adding files to Git"
 git push origin main
