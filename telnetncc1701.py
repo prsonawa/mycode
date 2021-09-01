@@ -11,8 +11,8 @@ telnetObj=telnetlib.Telnet(HOST,PORT)
 #telnetObj.write(message)
 
 ## REALLY great at hanging
-output=telnetObj.read_all()
-print(output.decode('utf-8'))
+#output=telnetObj.read_all()
+#print(output.decode('utf-8'))
 try:
     output=telnetObj.read_until(b"Ship name: ")
     print(output.decode('utf-8'))
