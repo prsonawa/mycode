@@ -1,0 +1,45 @@
+
+Where is the file location? PING sw-1.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 (10.4.236.167) 56(84) bytes of data.
+64 bytes from sw-1.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 (10.4.236.167): icmp_seq=1 ttl=64 time=0.441 ms
+
+--- sw-1.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.441/0.441/0.441/0.000 ms
+PING sw-2.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 (10.6.33.155) 56(84) bytes of data.
+64 bytes from sw-2.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 (10.6.33.155): icmp_seq=1 ttl=64 time=0.467 ms
+
+--- sw-2.ed37d5b1-12da-471d-bb06-b9e3a8db7ed2 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.467/0.467/0.467/0.000 ms
+
+***** BEGIN SSH CHECKING *****
+
+	**IP: - sw-1 - SSH connectivity UP
+
+
+	**IP: - sw-2 - SSH connectivity UP
+
+
+	**IP: -  - SSH connectivity DOWN
+
+
+***** BEGIN ICMP CHECKING *****
+
+	**IP: - sw-1 - responding to ICMP
+
+
+	**IP: - sw-2 - responding to ICMP
+
+
+	**IP: -  - NOT responding to ICMP
+
+
+***** BEGIN SHOW IP INT BRIEF *****
+
+Interface              IP Address         Status     Protocol         MTU
+Management1            10.4.236.167/12    up         up              1500
+
+Interface              IP Address         Status     Protocol         MTU
+Management1            10.6.33.155/12     up         up              1500
+
+** ISSUING COMMAND FAILED **
