@@ -1161,4 +1161,275 @@ Helpful notes:[m[3;15H[K[4;1H[31m  - os.getpid() function will return I[m
     Typically the main thread is the thread fr[m[6;47H[K[6;47H[?25h[?25l[31mom which Python was
     started.[m[7;13H[K[8;1H[31m  - threading.current_thread()[m[8;31H[K[8;31H[?25h[?25l[31m returns the current thread object.
 """[m        [9;12H[K[10;1H[K[11;1H[K[12;1H[35mimport[m thread[12;14H[K[12;14H[?25h[?25ling
-[35mimport[m os [13;11H[K[14;1H  [14;3H[K[15;1H[38;5;130mdef[m [36mtask1[m():[15;13H[K[16;1H    [36m
+[35mimport[m os [13;11H[K[14;1H  [14;3H[K[15;1H[38;5;130mdef[m [36mtask1[m():[15;13H[K[16;1H    [36mprint[m([31m"Task 1 assigned to t[m[16;32H[K[16;32H[?25h[?25l[31mhread: {}"[m.format(threading.current_thread().name))
+    [36mprint[m([31m"[m[17;12H[K[17;12H[?25h[?25l[31mID of process running task 1: {}"[m.format(os.getpid()))[18;1H[K[19;1H[K[20;1H[38;5;130mdef[m [36mt[m[20;6H[K[20;6H[?25h[?25l[36mask2[m():
+    [36mprint[m([31m"Task 2 assigned to thread: {}"[m.format(threa[21;55H[K[21;55H[?25h[?25lding.current_thread().name))
+    [36mprint[m([31m"ID of proce[m[22;23H[K[22;23H[?25h[?25l[31mss running task 2: {}"[m.format(os.getpid()))[23;1H[K[24;1H[38;5;130mdef[m [36mmain[m():[24;12H[K[25;1H    [34m#[m[25;6H[K[25;6H[?25h[?25l[34m print ID of current process [m
+    [36mprint[m([31m"ID of process running [m[26;34H[K[26;34H[?25h[?25l[31mmain program: {}"[m.format(os.getpid()))
+  [27;3H[K[28;1H    [34m# print name of [m[28;21H[K[28;21H[?25h[?25l[34mmain thread [m
+    [36mprint[m([31m"Main thread name: {}"[m.format(threading.[29;51H[K[29;51H[?25h[?25lmain_thread().name))
+  [30;3H[K[31;1H    [34m# creating threads [m[31;24H[K[32;1H    t1 = threa[32;15H[K[32;15H[?25h[?25lding.Thread(target=task1, name=[31m't1'[m)
+    t2 = threading.Thread[33;26H[K[33;26H[?25h[?25l(target=task2, name=[31m't2'[m)
+  [34;3H[K[35;1H    [34m# starting threads [m[35;24H[K[36;1H    t1.[36;8H[K[36;8H[?25h[?25lstart()
+    t2.start() [37;16H[K[38;1H  [38;3H[K[39;1H    [34m# wait until all threads finish[m[39;36H[K[39;36H[?25h[?25l[34m [m
+    t1.join() [40;15H[K[41;1H    t2.join() [41;15H[K[42;1H[K[43;1H[38;5;130mif[m __name__ == [31m"__main__"[m: [43;28H[K[44;1H  [44;3H[K[44;3H[?25h[?25l[54;1H[K[44;5Hmain()[45;1H[K[54;91H45,0-1[8CAll[45;1H[?25h[?25l[54;81H^[[45;1H[54;81H  [45;1H[54;81H^[[45;1H[54;81H  [45;1H[?25h[?25l[54;81H:[45;1H[54;81H[K[54;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"tophat.py" [New] 45L, 1267C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;student@bchd: ~/mycode/sewing[01;32mstudent@bchd[00m:[01;34m~/mycode/sewing[00m$ python3 tophat.py
+ID of process running main program: 3254
+Main thread name: MainThread
+Task 1 assigned to thread: t1
+ID of process running task 1: 3254
+Task 2 assigned to thread: t2
+ID of process running task 2: 3254
+]0;student@bchd: ~/mycode/sewing[01;32mstudent@bchd[00m:[01;34m~/mycode/sewing[00m$ cd
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ .[Kcd my
+bash: cd: my: No such file or directory
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ cd mycode/
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ 
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ 
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ .git/s[K[K[K[K[K/git.sh 
+[main b0b2f24] Adding files to Git
+ 7 files changed, 682 insertions(+), 1 deletion(-)
+ create mode 100644 sewing/blacktie.py
+ create mode 100644 sewing/cleanshirt.py
+ create mode 100644 sewing/newshoes.py
+ create mode 100644 sewing/silksuit.py
+ create mode 100644 sewing/topcoat.py
+ create mode 100644 sewing/tophat.py
+Counting objects: 10, done.
+Delta compression using up to 2 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 7.19 KiB | 1.44 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)[Kremote: Resolving deltas:  16% (1/6)[Kremote: Resolving deltas:  33% (2/6)[Kremote: Resolving deltas:  50% (3/6)[Kremote: Resolving deltas:  66% (4/6)[Kremote: Resolving deltas:  83% (5/6)[Kremote: Resolving deltas: 100% (6/6)[Kremote: Resolving deltas: 100% (6/6), completed with 2 local objects.[K
+To github.com:prsonawa/mycode.git
+   9708b56..b0b2f24  main -> main
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ 
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ ansible --version
+[0;35m[DEPRECATION WARNING]: Ansible will require Python 3.8 or newer on the controller starting with Ansible [0m
+[0;35m2.12. Current version: 3.6.9 (default, Jan 26 2021, 15:33:00) [GCC 8.4.0]. This feature will be removed [0m
+[0;35mfrom ansible-core in version 2.12. Deprecation warnings can be disabled by setting [0m
+[0;35mdeprecation_warnings=False in ansible.cfg.[0m
+ansible [core 2.11.4] 
+  config file = None
+  configured module search path = ['/home/student/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/student/.local/lib/python3.6/site-packages/ansible
+  ansible collection location = /home/student/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/student/.local/bin/ansible
+  python version = 3.6.9 (default, Jan 26 2021, 15:33:00) [GCC 8.4.0]
+  jinja version = 3.0.1
+  libyaml = True
+]0;student@bchd: ~/mycode[01;32mstudent@bchd[00m:[01;34m~/mycode[00m$ cd
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ python3 -m pip install ansible
+/usr/lib/python3/dist-packages/secretstorage/dhcrypto.py:15: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+/usr/lib/python3/dist-packages/secretstorage/util.py:19: CryptographyDeprecationWarning: int_from_bytes is deprecated, use int.from_bytes instead
+  from cryptography.utils import int_from_bytes
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: ansible in ./.local/lib/python3.6/site-packages (4.4.0)
+Requirement already satisfied: ansible-core<2.12,>=2.11.3 in ./.local/lib/python3.6/site-packages (from ansible) (2.11.4)
+Requirement already satisfied: resolvelib<0.6.0,>=0.5.3 in ./.local/lib/python3.6/site-packages (from ansible-core<2.12,>=2.11.3->ansible) (0.5.4)
+Requirement already satisfied: cryptography in ./.local/lib/python3.6/site-packages (from ansible-core<2.12,>=2.11.3->ansible) (3.4.8)
+Requirement already satisfied: PyYAML in ./.local/lib/python3.6/site-packages (from ansible-core<2.12,>=2.11.3->ansible) (5.4.1)
+Requirement already satisfied: jinja2 in ./.local/lib/python3.6/site-packages (from ansible-core<2.12,>=2.11.3->ansible) (3.0.1)
+Requirement already satisfied: packaging in ./.local/lib/python3.6/site-packages (from ansible-core<2.12,>=2.11.3->ansible) (21.0)
+Requirement already satisfied: cffi>=1.12 in ./.local/lib/python3.6/site-packages (from cryptography->ansible-core<2.12,>=2.11.3->ansible) (1.14.6)
+Requirement already satisfied: pycparser in ./.local/lib/python3.6/site-packages (from cffi>=1.12->cryptography->ansible-core<2.12,>=2.11.3->ansible) (2.20)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.local/lib/python3.6/site-packages (from jinja2->ansible-core<2.12,>=2.11.3->ansible) (2.0.1)
+Requirement already satisfied: pyparsing>=2.0.2 in ./.local/lib/python3.6/site-packages (from packaging->ansible-core<2.12,>=2.11.3->ansible) (2.4.7)
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ wget https://static.alta3.com/projects/ansible/modules/setup.sh -O mod-setup.sh
+--2021-09-03 18:53:45--  https://static.alta3.com/projects/ansible/modules/setup.sh
+Resolving static.alta3.com (static.alta3.com)... 10.0.0.14, 10.0.0.24, 10.0.0.24, ...
+Connecting to static.alta3.com (static.alta3.com)|10.0.0.14|:443... failed: Connection refused.
+Connecting to static.alta3.com (static.alta3.com)|10.0.0.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2304 (2.2K) [text/plain]
+Saving to: ‘mod-setup.sh’
+
+mod-setup.sh                 0%[                                         ]       0  --.-KB/s               mod-setup.sh               100%[========================================>]   2.25K  --.-KB/s    in 0s      
+
+2021-09-03 18:53:45 (34.1 MB/s) - ‘mod-setup.sh’ saved [2304/2304]
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ wget https://static.alta3.com/projects/ansible/max_teardown.sh -O max_teardown.sh
+--2021-09-03 18:53:51--  https://static.alta3.com/projects/ansible/max_teardown.sh
+Resolving static.alta3.com (static.alta3.com)... 10.0.0.24, 10.0.0.24, 10.0.0.24, ...
+Connecting to static.alta3.com (static.alta3.com)|10.0.0.24|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1523 (1.5K) [text/plain]
+Saving to: ‘max_teardown.sh’
+
+max_teardown.sh              0%[                                         ]       0  --.-KB/s               max_teardown.sh            100%[========================================>]   1.49K  --.-KB/s    in 0s      
+
+2021-09-03 18:53:51 (14.2 MB/s) - ‘max_teardown.sh’ saved [1523/1523]
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ bash max_teardown.sh
+Cleaning up lab...
+[0/4 complete]: stopping servers
+[1/4 complete]
+[2/4 complete]
+[3/4 complete]
+[4/4 complete]
+ssh Done!
+Cleaning up lab...
+[0/4 complete]: stopping servers
+[1/4 complete]
+[2/4 complete]
+[3/4 complete]
+[4/4 complete]
+d2 Done!
+Cleaning up lab...
+[0/4 complete]: stopping servers
+[1/4 complete]
+[2/4 complete]
+[3/4 complete]
+[4/4 complete]
+modules Done!
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ bash mod-setup.sh
+Building lab...
+7d3369bd432a90b8f4cc00b4159e4408e69ffd3182121c1eeea8b05f0639ada4
+Loaded image: ssh-bender:latest
+Loaded image: ssh-fry:latest
+Loaded image: ssh-zoidberg:latest
+Loaded image: ssh-farnsworth:latest
+88263247dfc2918ae658f9dda985cbe6916bf894d7af27e4d46193349dde3e3f
+a33421288ccea05b788d09cd69f26d2ea8b4b64950035b15b7333d4952a63511
+9cc404cf4c6660e0375e40a96e6d0e53bd9756a3045df51dcc78492010f45b79
+7d8eba095d25233aa7fe66f14337e7538524ccd6e3f2a98063b101da9f5f61fc
+Complete!
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ vim ~/.ansible.cfg
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;54r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[54;1H"~/.ansible.cfg" [New File][2;1H▽[6n[2;1H  [1;1H[>c[?12$p]10;?]11;?[2;1H[94m~                                                                                                           [3;1H~                                                                                                           [4;1H~                                                                                                           [5;1H~                                                                                                           [6;1H~                                                                                                           [7;1H~                                                                                                           [8;1H~                                                                                                           [9;1H~                                                                                                           [10;1H~                                                                                                           [11;1H~                                                                                                           [12;1H~                                                                                                           [13;1H~                                                                                                           [14;1H~                                                                                                           [15;1H~                                                                                                           [16;1H~                                                                                                           [17;1H~                                                                                                           [18;1H~                                                                                                           [19;1H~                                                                                                           [20;1H~                                                                                                           [21;1H~                                                                                                           [22;1H~                                                                                                           [23;1H~                                                                                                           [24;1H~                                                                                                           [25;1H~                                                                                                           [26;1H~                                                                                                           [27;1H~                                                                                                           [28;1H~                                                                                                           [29;1H~                                                                                                           [30;1H~                                                                                                           [31;1H~                                                                                                           [32;1H~                                                                                                           [33;1H~                                                                                                           [34;1H~                                                                                                           [35;1H~                                                                                                           [36;1H~                                                                                                           [37;1H~                                                                                                           [38;1H~                                                                                                           [39;1H~                                                                                                           [40;1H~                                                                                                           [41;1H~                                                                                                           [42;1H~                                                                                                           [43;1H~                                                                                                           [44;1H~                                                                                                           [45;1H~                                                                                                           [46;1H~                                                                                                           [47;1H~                                                                                                           [48;1H~                                                                                                           [49;1H~                                                                                                           [50;1H~                                                                                                           [51;1H~                                                                                                           [52;1H~                                                                                                           [53;1H~                                                                                                           [m[54;91H0,0-1[9CAll[1;1H[?25h[?25l[54;81Hi[1;1H[54;81H [1;1H[54;1H[1m-- INSERT --[m[54;13H[K[54;91H0,1[11CAll[1;1H[?25h[?25l[32m[defaults][m
+inventory =[31m /home/student/mycode/inv/dev/hosts[m[2;47H[K[3;1H[K[3;1H[?25h[?25lhost_key_checking =[31m [m[38;5;130mFalse[m[4;1H[K[54;91H4[4;1H[?25h[?25l[5;1H[K[54;91H5[5;1H[?25h[54;1H[K[5;1H[?25l[54;81H^[[5;1H[54;81H  [5;1H[54;91H5,0-1[9CAll[5;1H[?25h[?25l[54;81H:[5;1H[54;81H[K[54;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l".ansible.cfg" [New] 5L, 86C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ansible-config dump
+[0;35m[DEPRECATION WARNING]: Ansible will require Python 3.8 or newer on the controller starting with Ansible [0m
+[0;35m2.12. Current version: 3.6.9 (default, Jan 26 2021, 15:33:00) [GCC 8.4.0]. This feature will be removed [0m
+[0;35mfrom ansible-core in version 2.12. Deprecation warnings can be disabled by setting [0m
+[0;35mdeprecation_warnings=False in ansible.cfg.[0m
+[?1h=[0;32mACTION_WARNINGS(default) = True[0m[m
+[0;32mAGNOSTIC_BECOME_PROMPT(default) = True[0m[m
+[0;32mALLOW_WORLD_READABLE_TMPFILES(default) = False[0m[m
+[0;32mANSIBLE_CONNECTION_PATH(default) = None[0m[m
+[0;32mANSIBLE_COW_ACCEPTLIST(default) = ['bud-frogs', 'bunny', 'cheese', 'daemon', 'default', 'dragon', 'elephant-[m
+[0;32mANSIBLE_COW_PATH(default) = None[0m[m
+[0;32mANSIBLE_COW_SELECTION(default) = default[0m[m
+[0;32mANSIBLE_FORCE_COLOR(default) = False[0m[m
+[0;32mANSIBLE_NOCOLOR(default) = False[0m[m
+[0;32mANSIBLE_NOCOWS(default) = False[0m[m
+[0;32mANSIBLE_PIPELINING(default) = False[0m[m
+[0;32mANY_ERRORS_FATAL(default) = False[0m[m
+[0;32mBECOME_ALLOW_SAME_USER(default) = False[0m[m
+[0;32mBECOME_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/become', '/usr/share/ansible/plugins/become'][0m[m
+[0;32mCACHE_PLUGIN(default) = memory[0m[m
+[0;32mCACHE_PLUGIN_CONNECTION(default) = None[0m[m
+[0;32mCACHE_PLUGIN_PREFIX(default) = ansible_facts[0m[m
+[0;32mCACHE_PLUGIN_TIMEOUT(default) = 86400[0m[m
+[0;32mCALLABLE_ACCEPT_LIST(default) = [][0m[m
+[0;32mCALLBACKS_ENABLED(default) = [][0m[m
+[0;32mCOLLECTIONS_ON_ANSIBLE_VERSION_MISMATCH(default) = warning[0m[m
+[0;32mCOLLECTIONS_PATHS(default) = ['/home/student/.ansible/collections', '/usr/share/ansible/collections'][0m[m
+[0;32mCOLLECTIONS_SCAN_SYS_PATH(default) = True[0m[m
+[0;32mCOLOR_CHANGED(default) = yellow[0m[m
+[0;32mCOLOR_CONSOLE_PROMPT(default) = white[0m[m
+[0;32mCOLOR_DEBUG(default) = dark gray[0m[m
+[0;32mCOLOR_DEPRECATE(default) = purple[0m[m
+[0;32mCOLOR_DIFF_ADD(default) = green[0m[m
+[0;32mCOLOR_DIFF_LINES(default) = cyan[0m[m
+[0;32mCOLOR_DIFF_REMOVE(default) = red[0m[m
+[0;32mCOLOR_ERROR(default) = red[0m[m
+[0;32mCOLOR_HIGHLIGHT(default) = white[0m[m
+[0;32mCOLOR_OK(default) = green[0m[m
+[0;32mCOLOR_SKIP(default) = cyan[0m[m
+[0;32mCOLOR_UNREACHABLE(default) = bright red[0m[m
+[0;32mCOLOR_VERBOSE(default) = blue[0m[m
+[0;32mCOLOR_WARN(default) = bright purple[0m[m
+[0;32mCOMMAND_WARNINGS(default) = False[0m[m
+[0;32mCONDITIONAL_BARE_VARS(default) = False[0m[m
+[0;32mCONNECTION_FACTS_MODULES(default) = {'asa': 'ansible.legacy.asa_facts', 'cisco.asa.asa': 'cisco.asa.asa_fact[m
+[0;32mCONTROLLER_PYTHON_WARNING(default) = True[0m[m
+[0;32mCOVERAGE_REMOTE_OUTPUT(default) = None[0m[m
+[0;32mCOVERAGE_REMOTE_PATHS(default) = *[0m[m
+[0;32mDEFAULT_ACTION_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/action', '/usr/share/ansible/plugins/[m
+[0;32mDEFAULT_ALLOW_UNSAFE_LOOKUPS(default) = False[0m[m
+[0;32mDEFAULT_ASK_PASS(default) = False[0m[m
+[0;32mDEFAULT_ASK_VAULT_PASS(default) = False[0m[m
+[0;32mDEFAULT_BECOME(default) = False[0m[m
+[0;32mDEFAULT_BECOME_ASK_PASS(default) = False[0m[m
+[0;32mDEFAULT_BECOME_EXE(default) = None[0m[m
+[0;32mDEFAULT_BECOME_FLAGS(default) = [0m[m
+[0;32mDEFAULT_BECOME_METHOD(default) = sudo[0m[m
+[0;32mDEFAULT_BECOME_USER(default) = root[0m[m
+:[K[K[0;32mDEFAULT_CACHE_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/cache', '/usr/share/ansible/plugins/ca[m
+:[K[K[0;32mDEFAULT_CALLBACK_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/callback', '/usr/share/ansible/plug[m
+:[K[K[0;32mDEFAULT_CLICONF_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/cliconf', '/usr/share/ansible/plugin[m
+:[K[K[0;32mDEFAULT_CONNECTION_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/connection', '/usr/share/ansible/[m
+:[K[K[0;32mDEFAULT_DEBUG(default) = False[0m[m
+:[K[K[0;32mDEFAULT_EXECUTABLE(default) = /bin/sh[0m[m
+:[K[K[0;32mDEFAULT_FACT_PATH(default) = None[0m[m
+:[K[K[0;32mDEFAULT_FILTER_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/filter', '/usr/share/ansible/plugins/[m
+:[K[K[0;32mDEFAULT_FORCE_HANDLERS(default) = False[0m[m
+:[K[K[0;32mDEFAULT_FORKS(default) = 5[0m[m
+:[K[K[0;32mDEFAULT_GATHERING(default) = implicit[0m[m
+:[K[K[0;32mDEFAULT_GATHER_SUBSET(default) = ['all'][0m[m
+:[K[K[0;32mDEFAULT_GATHER_TIMEOUT(default) = 10[0m[m
+:[K[K[0;32mDEFAULT_HANDLER_INCLUDES_STATIC(default) = False[0m[m
+:[K[K[0;32mDEFAULT_HASH_BEHAVIOUR(default) = replace[0m[m
+:[K[K[0;33mDEFAULT_HOST_LIST(/home/student/.ansible.cfg) = ['/home/student/mycode/inv/dev/hosts'][0m[m
+:[K[K[0;32mDEFAULT_HTTPAPI_PLUGIN_PATH(default) = ['/home/student/.ansible/plugins/httpapi', '/usr/share/ansible/plugin[m
+:[K[K[0;32mDEFAULT_INTERNAL_POLL_INTERVAL(default) = 0.001[0m[m
+:[K[K:[K]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ [K-[Klog file: [K[?1l>
+Command 'sh-copy-id' not found, did you mean:
+
+  command 'ssh-copy-id' from deb openssh-client
+
+Try: apt install <deb name>
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ /usr/bin/ssh-copy-id: ERROR: Too many arguments.  Expecting a target hostname, got: 'bender@10.10.2.3ssh-copy-id' 'bender@10.10.2.3ssh-copy-id' 'bender@10.10.2.3ssh-copy-id' 'bender@10.10.2.3'
+
+Usage: /usr/bin/ssh-copy-id [-h|-?|-f|-n] [-i [identity_file]] [-p port] [[-o <ssh -o options>] ...] [user@]hostname
+        -f: force mode -- copy keys without trying to check if they are already installed
+        -n: dry run    -- no keys are actually copied
+        -h|-?: print this help
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+Command 'q' not found, but can be installed with:
+
+apt install python-q-text-as-data 
+apt install python3-q-text-as-data
+
+Ask your administrator to install one of them.
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ 
+Command 'q' not found, but can be installed with:
+
+apt install python-q-text-as-data 
+apt install python3-q-text-as-data
+
+Ask your administrator to install one of them.
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Warning: Permanently added '10.10.2.3' (ECDSA) to the list of known hosts.
+bender@10.10.2.3's password: 
+Permission denied, please try again.
+bender@10.10.2.3's password: 
+Permission denied, please try again.
+bender@10.10.2.3's password: 
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'bender@10.10.2.3'"
+and check to make sure that only the key(s) you wanted were added.
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ ]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+
+/usr/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+                (if you think this is a mistake, you may want to use -f option)
+
+]0;student@bchd: ~[01;32mstudent@bchd[00m:[01;34m~[00m$ exit
+
+Script done on 2021-09-03 19:00:01+0000
